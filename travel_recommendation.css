@@ -187,3 +187,60 @@ nav {
     cursor: pointer;
   }
   
+  .contact_us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 120px;  /* deja espacio a los íconos */
+    color: white;
+    margin-top: 5%;
+    width: 90%;
+  }
+
+  .contact_us h1{
+    font-size: 70px;
+    font-family: Georgia, serif;
+    display: block;         /* hace que se comporte como un título */
+    margin-bottom: 20px;
+  }
+
+  .contact_us_left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+  }
+
+  .contact_us_right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formToFill {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 15px;
+    width: 50%;
+  }
+
+  .formToFill label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .formToFill label {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .formToFill input{
+    width: 100%;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+  }
