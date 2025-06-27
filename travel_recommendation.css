@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Basic CSS for the form elements */
+  body {
+    flex: 1;
+    font-size: 20px;
+    background-image: url("plane.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+.title {
+    font-size: 30px;
+    color:#f2f2f2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: block;         /* hace que se comporte como un título */
+    text-align: center;     /* centra el texto en la página */
+}
+
+nav {
+    position: relative;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a, .nav-buttons input,button {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px
+  }
+
+  .main-div {
+    display: block; /* Esto asegura disposición en bloque (uno bajo otro) */
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 120px;  /* deja espacio a los íconos */
+    color: white;
+    position: absolute;
+    margin-top: 5%;
+  }
+
+  .main-div h1 {
+    font-size: 70px;
+    font-family: Georgia, serif;
+    display: block;         /* hace que se comporte como un título */
+    margin-bottom: 20px;
+  }
+
+  .main-div p {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.4); /* caja semi-transparente */
+    padding: 15px 20px;
+    max-width: 400px;
+  }
+
+  .about-us {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.4); /* caja semi-transparente */
+    padding: 15px 20px;
+    max-width: 80vw;
+  }
+  
+  .about-us p {
+    margin-left: 10px;
+  }
+  
+  div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;     /* centrado vertical */
+  }
+  
+  input[type="text"],
+  select {
+    width: 25ch;
+    padding: 7px;
+    color:#333
+  }
+  
+  button {
+    padding: 7px 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .book-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .social-bar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .social-bar ul {
+    list-style: none;  /* Quita los puntos */
+    padding: 0;
+    margin: 0;
+  }
+
+  .team-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+
+  .team-section h3 {
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+  }
+  
+  .team-card {
+    display: flex;
+    flex-direction: column; /* Organización vertical */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .team-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .team-card p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .role-button {
+    padding: 8px 16px;
+    background-color: #4b59f7;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
