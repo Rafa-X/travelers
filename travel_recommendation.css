@@ -25,6 +25,7 @@
     text-align: center;     /* centra el texto en la página */
 }
 
+/*-------------------------------------------------*/
 nav {
     position: relative;
     background-color: #333;
@@ -40,9 +41,47 @@ nav {
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-    margin: 10px
+    margin: 10px;
   }
 
+/*-------------------------------------------------*/
+    .results-dropdown {
+      position: absolute;
+      display: none;
+      top: 10%;                   /* alinear arriba */
+      left: 65%;               /* posicionar a la derecha del input */
+      background-color: white;
+      color: black;
+      max-width: 40%;
+      max-height: 50%;
+      overflow-y: auto;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+    }
+  
+    .results-dropdown img {
+        max-width: 90%;            /* o 80px o el tamaño que prefieras */
+        max-height: 50%;
+        object-fit: cover;      /* recorta y llena el espacio sin deformar */
+        border-radius: 5px;
+        flex-shrink: 0;         /* evita que la imagen se haga más chica si hay poco espacio */
+    }
+
+    .results-dropdown button {
+        font-size: 20px;
+        padding: 7px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+      
+    .results-dropdown p:hover {
+        background-color: #f0f0f0;
+    }
+
+/*-------------------------------------------------*/
   .main-div {
     display: block; /* Esto asegura disposición en bloque (uno bajo otro) */
     align-items: center;
@@ -244,3 +283,4 @@ nav {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
   }
+
