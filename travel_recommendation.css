@@ -55,9 +55,20 @@ nav {
       max-width: 40%;
       max-height: 50%;
       overflow-y: auto;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      padding: 10px;
+      padding: 20px;
+    }
+
+    .results-dropdown div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    .results-dropdown div:hover {
+        background-color: #f0f0f0;
     }
   
     .results-dropdown img {
@@ -70,6 +81,7 @@ nav {
 
     .results-dropdown button {
         font-size: 20px;
+        margin-top: 10px;
         padding: 7px 20px;
         background-color: #4CAF50;
         color: white;
@@ -77,8 +89,9 @@ nav {
         cursor: pointer;
     }
       
-    .results-dropdown p:hover {
-        background-color: #f0f0f0;
+    .results-dropdown p {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
 /*-------------------------------------------------*/

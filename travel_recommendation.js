@@ -5,6 +5,7 @@ const destinations = [];
 const resultsDiv =  document.getElementById('results');
 
 function searchDestination(){
+    destinations.length = 0;  //restart destinations array
     const destination = destinationInput.value;
     console.log("dest:", destination)
     if (destination.trim() === "") {return;}
@@ -13,19 +14,6 @@ function searchDestination(){
     .then(response => response.json())
     .then(data => {    
         const regex = new RegExp(destination.toLowerCase(), "i"); // "i" = case insensitive
-        
-        data.countries.forEach(country => {
-            country.cities.forEach(city => {
-                if (regex.test(city.description)) {
-                    destinations.push({
-                        image: city.imageUrl,
-                        name: city.name,
-                        description: city.description
-                    });
-                    console.log(city.name)
-                }
-            });
-        });
 
         Object.entries(data).forEach(([key, items]) => {
             items.forEach(item => {
@@ -60,14 +48,16 @@ function searchDestination(){
             resultsDiv.innerHTML = "<p>No matches found.</p>";
         }else{
             console.log(destinations.length)
+
             destinations.forEach(item => {
-                const p = document.createElement('p');
-                p.innerHTML = 
-                    `<img src="${item.image}" alt="${item.name}" /><br>
-                    <strong>${item.name}</strong><br>
-                    <small>${item.description}</small>
-                    <button>Visit</button>`;
-                resultsDiv.appendChild(p);
+                const itemDiv = document.createElement("div");
+                itemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <p>Nombre del destino: <strong>${item.name}</strong></p>
+                    <p>${item.description}</p>
+                    <button>Ver más</button>
+                    `;
+                resultsDiv.appendChild(itemDiv);
             })
             resultsDiv.style.display = "block";
         }
@@ -81,8 +71,13 @@ function resetDestination(){
     destination.value = '';
     resultsDiv.innerHTML = '';
     resultsDiv.style.display = "none"; // Lo oculta visualmente
-    destinations = [];
+    destinations.length = 0;
 }
 
 btnSearch.addEventListener('click', searchDestination);
+btnSearch.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        searchDestination();
+    }
+})
 btnReset.addEventListener('click',resetDestination);
