@@ -53,9 +53,10 @@ nav {
       background-color: white;
       color: black;
       max-width: 40%;
-      max-height: 90%;
+      max-height: 88%;
       overflow-y: auto;
       padding: 20px;
+      z-index: 999;
     }
 
     .results-dropdown div{

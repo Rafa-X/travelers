@@ -1,8 +1,12 @@
 const btnSearch =   document.getElementById('btnSearch');
 const btnReset =    document.getElementById('btnReset');
+const btnSubmit =   document.getElementById('button-form');
 const destinationInput = document.getElementById('destination');
 const destinations = [];
 const resultsDiv =  document.getElementById('results');
+const formF1 = document.getElementById('form_name');
+const formF2 = document.getElementById('form_mail');
+const formF3 = document.getElementById('form_msg');
 
 function searchDestination(){
     destinations.length = 0;  //restart destinations array
@@ -74,6 +78,13 @@ function resetDestination(){
     destinations.length = 0;
 }
 
+function submitForm(){
+    alert('Form Submitted!');
+    formF1.value = '';
+    formF2.value = '';
+    formF3.value = '';
+}
+
 btnSearch.addEventListener('click', searchDestination);
 btnSearch.addEventListener('keydown', function(event){
     if(event.key === 'Enter'){
@@ -81,3 +92,4 @@ btnSearch.addEventListener('keydown', function(event){
     }
 })
 btnReset.addEventListener('click',resetDestination);
+btnSubmit.addEventListener('click', submitForm);
